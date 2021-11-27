@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>NGstore</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bienvenidos</h1>
+        <hr>
+
+        <button id="btn-productos" class="btn btn-warning btn-sm d-flex justify-content-center">VER PRODUCTOS</button>
+
+    
+
+    <template id="template-carrito">
+        <tr>
+            <th scope="row">id</th>
+            <td></td>
+            <td>1</td>
+            <td>
+                <button class="btn btn-info btn-sm">
+                    +
+                </button>
+                <button class="btn btn-danger btn-sm">
+                    -
+                </button>
+            </td>
+            <td> $ <span></span> </td>
+        </tr>
+    </template>
+
+    <template id="template-card">
+        <div class="col-12 mb-2 col-md-4">
+            <div class="card">
+                <img src="" alt="" class="img-card-top">
+                <div class="card-body">
+                    <h5>Titulo</h5>
+                    <p>precio</p>
+                    <button class="btn btn-dark">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+<footer>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acción</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody id="items"></tbody>
+        <tfoot>
+            <tr id="footer">
+                <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="row" id="cards"></div>
+
+    <template id="template-footer">
+        <th scope="row" colspan="2">Total productos</th>
+        <td>10</td>
+        <td>
+            <button type="button" class="btn btn-danger btn-sm" id="vaciar-carrito">
+                vaciar todo
+            </button>
+            
+            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Finalizar compra
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">NGstore</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Ha comprado sus productos. Muchas gracias por elegirnos!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="finalizar-compra">Finalizar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+
+        <td class="font-weight-bold"> $ <span></span> </td>
+    </template>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="javascrip/funciones.js"></script>
+    <script src="javascrip/index.js"></script>
+
+</body>
+
+</html>
